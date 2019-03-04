@@ -1,4 +1,4 @@
 # obonus-layout
-Bonus service for customers
+Bonus service for clients (users)
 
 Project some problem with encoding in FF.
