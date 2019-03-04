@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/normalize-modify.css"/>
+    <link rel="stylesheet" href="js/magnific-popup/magnific-popup.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="page-reg">
+<header class="content">
+    <span class="site-name text-c">OBONUS.RU</span>
+
+</header>
+<main class="content">
+    <a class="btn popup-link">Вспывающее окно</a>
+		<div id="get-promocode" class="mfp-hide popup-content popup-get-promocode">
+				<div class="popup-text promocode-text text-c">
+						Продиктуйте этот промокод в магазине ООО “РемСтройПотолок” и получите скидку 12%
+						<div class="promocode text-c">ЖКЮ424</div>
+				</div>
+				<a class="popup-close btn" href="#">Закрыть</a>
+		</div>
+</main>
+<script rel="script" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/device.js"></script>
+<script rel="script" src="js/magnific-popup/magnific-popup.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.popup-link').magnificPopup({
+      items: {
+        src: '.popup-content',
+        type: 'inline'
+      }
+    }).click();
+  });
+  $(document).on('click', '.popup-close', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+</script>
+</body>
+</html>

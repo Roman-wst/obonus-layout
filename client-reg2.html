@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/normalize-modify.css"/>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript">
+      function timer() {
+        var obj = document.getElementById('timer');
+        obj.innerHTML--;
+
+        if (obj.innerHTML == 0) {
+          setTimeout(function () {
+          }, 1000);
+        }
+        else {
+          setTimeout(timer, 1000);
+        }
+      }
+
+      setTimeout(timer, 1000);
+    </script>
+
+</head>
+<body class="page-reg">
+<header class="content">
+    <span class="site-name text-c">OBONUS.RU</span>
+    <div class="bonus-name text-c"><b>Специальный бонус</b> для <br/> клиентов ДОМ-СЕРВИС</div>
+</header>
+<main class="content">
+    <form class="form">
+        <div class="form-group type-it">
+            <label class="lbl">Код из СМС:</label>
+            <input class="form-it" type="text"/>
+            <div class="form-desc">Введите код из СМС-сообщения</div>
+        </div>
+        <div class="form-group form-actions">
+            <button class="btn">Войти</button>
+        </div>
+        <div class="form-group text-c">
+            <span class="form-timer">Выслать код повторно <br/> можно будет через <span
+                    id="timer">30</span> секунд</span>
+        </div>
+    </form>
+</main>
+<script type="text/javascript" src="js/device.js"></script>
+</body>
+</html>

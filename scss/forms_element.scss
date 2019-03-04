@@ -1,0 +1,191 @@
+$form-element-size: 14px;
+$btn-bg-color: #27AE60;
+
+.form {
+  margin-top: 54px;
+  &-group {
+    margin-bottom: 16px;
+  }
+  .lbl, &-it, &-btn, .btn, .i-group-addon {
+    font-size: $form-element-size;
+    line-height: $form-element-size + 2;
+  }
+
+  .lbl {
+    display: block;
+    margin-bottom: 5px;
+    color: #666;
+  }
+
+  &-it, &-btn {
+    border-radius: 2px;
+  }
+
+  &-it {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #999;
+    color: #000;
+		&:disabled {
+			background-color: #d4d4d4;
+			opacity: 1;
+		}
+
+  }
+
+  &-desc {
+    margin: 8px 0 18px 2px;
+    color: #666;
+  }
+
+  &-actions {
+    text-align: center;
+  }
+
+  &-btn, .btn {
+    padding: 10px 14px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    min-width: 126px;
+  }
+
+  a {
+    color: #285FA5;
+    text-decoration: underline;
+  }
+
+  &-timer {
+    line-height: $form-element-size + 2;
+  }
+
+  .forgot-pass {
+    display: block;
+    font-size: $form-element-size;
+    line-height: $form-element-size + 2;
+    padding-top: 8px;
+    color: #126DD0;
+  }
+}
+
+.btn {
+  display: inline-block;
+  font-size: $form-element-size;
+  line-height: $form-element-size + 2;
+  border-radius: 2px;
+  color: #fff;
+  background-color: $btn-bg-color;
+  text-decoration: none;
+  padding: 10px 8px;
+  white-space: nowrap;
+	&:hover, &:active {
+		background-color: lighten($btn-bg-color, 5%);
+	}
+}
+
+.type-ich {
+  display: table;
+  .lbl-ich, .form-ich {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .form-ich {
+    width: 11px;
+    height: 11px;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+  .lbl-ich {
+    color: #858585;
+    line-height: $form-element-size + 3;
+  }
+}
+
+.pseudo-ich label {
+  display: table;
+  .form-ich {
+    display: none;
+    &:checked + .custom-ich::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      bottom: 2px;
+      left: 2px;
+      background-color: #a9a9a9;
+    }
+  }
+  .custom-ich, .lbl-ich {
+    display: table-cell;
+    vertical-align: top;
+  }
+  .custom-ich {
+    display: block;
+    position: relative;
+    width: 11px;
+    height: 11px;
+    border: 1px solid #888888;
+    margin-right: 8px;
+    margin-top: 2px;
+  }
+}
+
+.iphone .pseudo-ich .custom-ich {
+  border-radius: 11px;
+}
+
+.iphone .pseudo-ich .form-ich:checked + .custom-ich::before {
+  border-radius: 5px;
+}
+
+.i-group {
+  display: table;
+  width: 100%;
+  &-addon, .form-it {
+    display: table-cell;
+  }
+  &-addon {
+    width: 1%;
+    padding: 8px 8px 8px 7px;
+    border: 2px solid #999;
+    border-radius: 2px 0 0 2px;
+    background-color: #E1E1E1;
+  }
+
+  .form-it {
+    border-left-width: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+.in-process {
+  .form-it {
+    background-color: #d4d4d4;
+  }
+  .btn {
+    padding-top: 6px;
+    padding-bottom: 6px;
+    background-color: #A1A1A1;
+    svg {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+}
+
+.btn.get-new-pass {
+  min-width: 184px;
+}
+
+.error {
+  border-color: #DF7272;
+}
+
+.error + .form-desc {
+  color: #E95757;
+} 
+
+
+
+

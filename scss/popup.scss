@@ -1,0 +1,87 @@
+.popup {
+	&-link {
+		display: inline-block;
+	}
+	&-content {
+		min-height: 242px;
+		position: relative;
+		.popup-close {
+			display: block;
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 100%;
+			text-align: center;
+			color: #fff;
+			margin-top: 5px;
+
+		}
+		a {
+			color: #5491DF;
+		}
+	}
+	&-text {
+		padding-top: 32px;
+		padding-bottom: 36px;
+		color: #333;
+	}
+	&-get-promocode {
+		.popup-text {
+			font-size: $font-size + 2;
+			line-height: $font-size + 8;
+		}
+	}
+	&-get-phone {
+		.popup-text {
+			padding-top: 92px;
+			font-size: $font-size + 12;
+			line-height: $font-size + 22;
+		}
+	}
+	&-get-address {
+		.popup-text {
+			padding-top: 32px;
+			font-size: $font-size + 4;
+			line-height: $font-size +11;
+		}
+	}
+}
+
+.promocode {
+	font-family: RobotoSlabLight, sans-serif;
+	font-size: 42px;
+	line-height: 55px;
+	margin-top: 40px;
+	margin-bottom: 51px;
+	color: #000;
+
+}
+
+.desktop .popup-get-promocode .popup-text {
+	font-size: 16px;
+}
+
+
+
+.mobile {
+	.mfp {
+		&-container {
+			height: auto;
+			top: auto;
+			bottom: 0;
+			&:before {
+				height: auto;
+			}
+		}
+		&-content {
+			border-radius: 0;
+		}
+		&-close {
+			display: none;
+		}
+	}
+	.popup-text {
+		padding-top: 0;
+	}
+} 
+

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/normalize-modify.css"/>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="page-auth">
+<header class="content">
+    <span class="site-name text-c">OBONUS.RU</span>
+    <div class="bonus-name text-c">Бонусы для клиентов</div>
+</header>
+<main class="content">
+    <form class="form">
+        <div class="form-group type-it">
+            <label class="lbl">Номер телефона:</label>
+            <input class="form-it" type="text"/>
+        </div>
+        <div class="form-group type-it">
+            <label class="lbl">Код из последнего СМС:</label>
+            <input class="form-it" type="text"/>
+        </div>
+        <div class="form-group type-ich pseudo-ich">
+            <label>
+                <input type="checkbox" class="form-ich"/>
+                <span class="custom-ich"></span>
+                <span class="lbl-ich">Я принимаю условия <a href="#">Лицензионного соглашения</a> и даёте согласие на обработку персональных данных, на условиях определенных <a
+                        href="#">Политикой конфиденциальности.</a></span>
+            </label>
+        </div>
+        <div class="form-group form-actions">
+            <button class="btn">Войти</button>
+        </div>
+        <div class="form-group text-c">
+            <a class="forgot-pass">Забыли пароль?</a>
+        </div>
+    </form>
+
+</main>
+<script rel="script" src="js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/device.js"></script>
+<script rel="script" src="js/magnific-popup/magnific-popup.js"></script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.popup-link').magnificPopup({
+      items: {
+        src: '.popup-content',
+        type: 'inline'
+      }
+    }).click();
+  });
+  $(document).on('click', '.popup-close', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
+</script>
+</body>
+</html>
